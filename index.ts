@@ -107,7 +107,7 @@ console.log(value)*/
 return egg+butter+salt
 }
 let value=ingredient(1,3,7)
-console.log(value)*/
+console.log(value)
 
 /*function halffry(salt:number,...ingredient:number[])
 {
@@ -162,7 +162,7 @@ return cocked
 
 
 
-const arr1:string[]=["UBAID","AHSAN","ANUS","HAMZA","FARHAN"]
+/*const arr1:string[]=["UBAID","AHSAN","ANUS","HAMZA","FARHAN"]
 for(let i=0;i<arr1.length;i++){
     if(arr1[i]==="ANUS"){
         console.log(arr1[i]+"Friend")
@@ -174,3 +174,44 @@ for(let i=0;i<arr1.length;i++){
     
 }
 let Name:string="QAZI"
+*/
+
+//callback function
+
+
+function greeting(name,cb){
+    console.log('hello'+name)
+    cb(name)
+}
+
+function goodbye(name){
+    console.log("goodbye",name)
+}
+greeting("Qazi",goodbye)
+
+
+function karachi(name,cb){
+    console.log(name ,"Welcome to karachi")
+    cb("Umair")
+}
+
+function lahore(name){
+    console.log(name ,"Welcome to lahore")
+}
+karachi("Ubaid",lahore)
+
+function pakistan(name,cb){
+    console.log(name,"won tha match")
+    cb("India")
+}
+function india(name){
+console.log(name,"loss the match")
+}
+pakistan("Pakistan ",india)
+
+
+
+let arr=[1,2,3,4,5,6]
+arr.forEach(function(value,index){
+    console.log(value,index)
+})
