@@ -215,3 +215,92 @@ let arr=[1,2,3,4,5,6]
 arr.forEach(function(value,index){
     console.log(value,index)
 })
+
+
+//Pass by value (not another change)
+
+//primitive data types main(7)
+
+/*
+1)number
+2)boolean
+3)string
+4)null
+5)undefine
+6)symbol
+7)bigint
+*/
+
+/*let mynumber="hello"
+let anothernumber=mynumber
+anothernumber="world"
+console.log(mynumber)
+console.log(anothernumber)*/
+
+//pass by refference (bothe will be change)
+
+const person={
+    name:"ubaid",
+    depart:"CS", 
+}
+const anotherperson=person
+anotherperson.name="QAZI"
+console.log(person)
+console.log(anotherperson)
+
+// pass by refference ko pass by value bnana he tw or nested ko be
+
+let biryani={
+    name:"sindhi biryani",
+    quantity:20,
+    ingredient:{
+        chicken:1000,
+        salt:"1tbsp",
+        spices:["1","2"]
+    },
+};
+let anotherbiryani={
+    ...biryani,ingredient:{...biryani.ingredient}
+};
+anotherbiryani.ingredient.salt="2tbsp"
+console.log("Biryani",biryani)
+console.log("AnotherBiryani",anotherbiryani)
+
+const University={
+    name:"sir syed uni",
+    depart:"CS",
+    year:2022,
+    teacher:{
+        engtech:"SALMAN",
+        urdutech:"HAMZA",
+        teachers:[1,2,3,4,6]
+
+    },
+};
+ const anotheruniversity={
+     ...University,
+     teacher:{...University.teacher},
+ }
+
+anotheruniversity.teacher.engtech="UBAID"
+console.log("University",University)
+console.log("anotheruniversity",anotheruniversity)
+
+//2nd method of pass by refference to pass by value
+
+const University={
+    name:"sir syed uni",
+    depart:"CS",
+    year:2022,
+    teacher:{
+        engtech:"SALMAN",
+        urdutech:"HAMZA",
+        teachers:[1,2,3,4,6]
+
+    },
+};
+
+const anotheruniversity=structuredClone(University)
+anotheruniversity.teacher.engtech="UBAID"
+console.log("University",University)
+console.log("anotheruniversity",anotheruniversity)
