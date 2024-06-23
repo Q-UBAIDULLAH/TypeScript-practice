@@ -1,4 +1,15 @@
 // console.log("hello world")
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 //  let color:string;
 //  color="ubaidullah"
 //  console.log(color)
@@ -172,5 +183,71 @@ var arr = [1, 2, 3, 4, 5, 6];
 arr.forEach(function (value, index) {
     console.log(value, index);
 });
-
-
+//Pass by value (not another change)
+//primitive data types main(7)
+/*
+1)number
+2)boolean
+3)string
+4)null
+5)undefine
+6)symbol
+7)bigint
+*/
+/*let mynumber="hello"
+let anothernumber=mynumber
+anothernumber="world"
+console.log(mynumber)
+console.log(anothernumber)*/
+//pass by refference (bothe will be change)
+// const Persons={
+//     name:"ubaid",
+//     depart:"CS", 
+// }
+// const anotherperson=Persons
+// anotherperson.name="QAZI"
+// console.log(person)
+// console.log(anotherperson)
+// pass by refference ko pass by value bnana he tw or nested ko be
+var biryani = {
+    name: "sindhi biryani",
+    quantity: 20,
+    ingredient: {
+        chicken: 1000,
+        salt: "1tbsp",
+        spices: ["1", "2"]
+    },
+};
+var anotherbiryani = __assign(__assign({}, biryani), { ingredient: __assign({}, biryani.ingredient) });
+anotherbiryani.ingredient.salt = "2tbsp";
+console.log("Biryani", biryani);
+console.log("AnotherBiryani", anotherbiryani);
+var UNiversity = {
+    name: "sir syed uni",
+    depart: "CS",
+    year: 2022,
+    teacher: {
+        engtech: "SALMAN",
+        urdutech: "HAMZA",
+        teachers: [1, 2, 3, 4, 6]
+    },
+};
+var Anotheruniversity = __assign(__assign({}, UNiversity), { teacher: __assign({}, UNiversity.teacher) });
+Anotheruniversity.teacher.engtech = "UBAID";
+console.log("University", UNiversity);
+console.log("anotheruniversity", Anotheruniversity);
+//2nd method of pass by refference to pass by value
+var University = {
+    name: "sir syed uni",
+    depart: "CS",
+    year: 2022,
+    teacher: {
+        engtech: "SALMAN",
+        urdutech: "HAMZA",
+        teachers: [1, 2, 3, 4, 6]
+    },
+};
+var anotheruniversity = structuredClone(University);
+anotheruniversity.teacher.engtech = "UBAID";
+console.log("University", University);
+console.log("anotheruniversity", anotheruniversity);

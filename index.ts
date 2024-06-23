@@ -239,14 +239,14 @@ console.log(anothernumber)*/
 
 //pass by refference (bothe will be change)
 
-const person={
-    name:"ubaid",
-    depart:"CS", 
-}
-const anotherperson=person
-anotherperson.name="QAZI"
-console.log(person)
-console.log(anotherperson)
+// const Persons={
+//     name:"ubaid",
+//     depart:"CS", 
+// }
+// const anotherperson=Persons
+// anotherperson.name="QAZI"
+// console.log(person)
+// console.log(anotherperson)
 
 // pass by refference ko pass by value bnana he tw or nested ko be
 
@@ -266,7 +266,7 @@ anotherbiryani.ingredient.salt="2tbsp"
 console.log("Biryani",biryani)
 console.log("AnotherBiryani",anotherbiryani)
 
-const University={
+const UNiversity={
     name:"sir syed uni",
     depart:"CS",
     year:2022,
@@ -277,14 +277,14 @@ const University={
 
     },
 };
- const anotheruniversity={
-     ...University,
-     teacher:{...University.teacher},
+ const Anotheruniversity={
+     ...UNiversity,
+     teacher:{...UNiversity.teacher},
  }
 
-anotheruniversity.teacher.engtech="UBAID"
-console.log("University",University)
-console.log("anotheruniversity",anotheruniversity)
+Anotheruniversity.teacher.engtech="UBAID"
+console.log("University",UNiversity)
+console.log("anotheruniversity",Anotheruniversity)
 
 //2nd method of pass by refference to pass by value
 
