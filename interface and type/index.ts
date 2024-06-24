@@ -116,3 +116,4 @@ interface Student{
     address:"M67"
     }
     console.log(Karachi)
+
