@@ -20,6 +20,15 @@ return numone+numtwo
    /*let inner=outer(20)
    console.log(inner)*/
 
+   function student(num1){
+      return function (num2){
+  return num1+num2
+  
+      }
+  }
+  let st1=student(200)
+  let st2=st1(30)
+  console.log(st2,"new")
 
 //hoisting
 console.log(b)
@@ -38,3 +47,8 @@ function ubaid(){ //ye chl jaega opr call kroge tw
 console.log('Pakistan')
 
 }
+
+let anonymous=function(){
+   console.log("anonymous")
+}
+anonymous()
