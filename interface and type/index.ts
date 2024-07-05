@@ -10,6 +10,14 @@ console.log(person["city"]="Islamabad")//you can
 console.log(person)
 
 
+interface qazi{
+    name:string,
+    class :string,
+
+}
+
+
+
 //INTERFACE
 
 interface Student{
@@ -22,7 +30,7 @@ interface Student{
         S2:string
     }
     }
-    const student:Student={
+    const sTudent:Student={
         name:"Bilal",
         class:11,
     func:()=>{
@@ -34,11 +42,15 @@ interface Student{
         S2:'Instagram'
     }
     }
-    console.log(student.func())
+    console.log(sTudent.func())
     
     // Type Syntax
     
-    
+  
+
+
+
+
     type empidtype=number|string
     type empnametype=string
     type empagetype=number

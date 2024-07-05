@@ -15,11 +15,13 @@ return numone+numtwo
      return numone+numtwo
     }
    }
+
    let outer=outside(20)(30)  //eksath dono call
    console.log(outer)
    /*let inner=outer(20)
    console.log(inner)*/
 
+   
    function student(num1){
       return function (num2){
   return num1+num2
@@ -42,8 +44,8 @@ var a=function(){    //isme ( let or const) se  bnana prega ye make sure krta he
 console.log('hello world')
 }
 a()
-ubaid()
-function ubaid(){ //ye chl jaega opr call kroge tw 
+Ubaid()
+function Ubaid(){ //ye chl jaega opr call kroge tw 
 console.log('Pakistan')
 
 }

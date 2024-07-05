@@ -155,6 +155,14 @@ for(let i=0;i<arr1.length;i++){
 let Name:string="QAZI"
 */
 //callback function
+function qazi(Name, cb) {
+    console.log(Name);
+    cb("ubaid");
+}
+function ubaid(Name) {
+    console.log(Name);
+}
+qazi("QAZI", ubaid);
 function greeting(name, cb) {
     console.log('hello' + name);
     cb(name);
