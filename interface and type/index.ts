@@ -46,9 +46,6 @@ interface Student{
     
     // Type Syntax
     
-  
-
-
 
 
     type empidtype=number|string
@@ -129,3 +126,86 @@ interface Student{
     }
     console.log(Karachi)
 
+// it is standard index signature
+//interface numberarray{
+ //   [index:number]:number;
+//}
+//const mynumber:numberarray=[1,2,3,4,5]
+//console.log(mynumber)
+
+/*interface numberarray{
+    [index:number]:number;
+}
+const mynumber:numberarray=[1,2,3,4,5]
+console.log(mynumber)*/
+
+/*interface stringarray{
+    [index:number]:string;
+}
+const mystring:stringarray=["qazi","ubaid","abdullah"]
+console.log(mystring)*/
+
+
+interface bike{
+    [index:number]:string|number;
+}
+const mybikes:bike=["70","125","150",200,"yamaha"]
+
+console.log(mybikes)
+//also we can define particular index value 
+
+interface Myarray{
+    0:number;
+    1:string;
+    2:number;
+    3:number;
+    4:string
+}
+
+const myarray:Myarray=[6,"qazi",3,4,"ubaid"]
+console.log(myarray)
+
+interface cars{
+    0:string;
+    1:number;
+    2:string;
+    3:number;
+}
+const mycars:cars=["Audi",2020,"Civic",2024]
+console.log(mycars)
+
+
+
+type namess=[string,number]
+type school={
+    0:string;
+    1:number
+}
+const myschool:school=["hanzala",2]
+console.log("type",myschool)
+
+
+type home=string|number
+type hometype={
+    [index:number]:home
+}
+const myhome:hometype=[1,"qazi",23,"javed"]
+console.log(myhome)
+
+
+type list=[]
+type mylist={
+    0:string;
+    1:number;
+    2:string
+}
+const newlist:mylist=["www",2,"aaa"]
+console.log(newlist)
+
+type bikes=(string|number)[]
+const newbikes:bike=[1,"23",2,"#2"]
+console.log(newbikes)
+
+type mobile=[string,number,string]
+const mymobile:mobile=["2",3,"7"]
+console.log(mymobile)

@@ -259,3 +259,29 @@ var anotheruniversity = structuredClone(University);
 anotheruniversity.teacher.engtech = "UBAID";
 console.log("University", University);
 console.log("anotheruniversity", anotheruniversity);
+//callbackbhell
+//pehle ye chle phr ye
+function greeting(cb){
+setTimeout(()=>{
+console.log("helllo world")
+cb()
+},2000)
+}
+function printname(){
+setTimeout(()=>{
+console.log("ali")
+},1000)
+}
+greeting(printname)
+
+
+function makebiryani(){
+    return new Promise((resolve,reject)=>{
+resolve(23)
+    })
+}
+makebiryani().then((result)=>{
+console.log(result)//23
+}).catch((error)=>{
+    console.log(error)
+})
