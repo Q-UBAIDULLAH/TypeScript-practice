@@ -268,7 +268,7 @@ let biryani={
         chicken:1000,
         salt:"1tbsp",
         spices:["1","2"]
-    },
+    }, 
 };
 
 let anotherbiryani={
